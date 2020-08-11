@@ -1,0 +1,6 @@
+D:\CSharp\INIParser\INIParser\obj\Debug\INIParser.csprojAssemblyReference.cache
+D:\CSharp\INIParser\INIParser\obj\Debug\INIParser.csproj.CoreCompileInputs.cache
+D:\CSharp\INIParser\INIParser\bin\Debug\INIParser.dll
+D:\CSharp\INIParser\INIParser\bin\Debug\INIParser.pdb
+D:\CSharp\INIParser\INIParser\obj\Debug\INIParser.dll
+D:\CSharp\INIParser\INIParser\obj\Debug\INIParser.pdb
