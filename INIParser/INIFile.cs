@@ -3,10 +3,17 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 
-namespace INIParser
+namespace INIPass
 {
+    /// <summary>
+    /// Contains the sections of a ini-file.
+    /// </summary>
     public class INIFile : Dictionary<string, INISection>
     {
+        /// <summary>
+        /// This compiles the file into a string.
+        /// </summary>
+        /// <returns>The compiled string.</returns>
         public string Compile()
         {
             string text = "";
@@ -28,10 +35,25 @@ namespace INIParser
             return text;
         }
 
+        /// <summary>
+        /// Loads the file by using a file path.
+        /// </summary>
+        /// <param name="path">A path, where the file is located.</param>
+        /// <returns>The decompiled file.</returns>
         public static INIFile Load(string path) => LoadData(File.ReadAllText(path));
 
+        /// <summary>
+        /// Loads the file by using a stream.
+        /// </summary>
+        /// <param name="stream"></param>
+        /// <returns>The decompiled file.</returns>
         public static INIFile Load(Stream stream) => LoadData(new StreamReader(stream).ReadToEnd());
 
+        /// <summary>
+        /// Loads the file by inserting the data directly.
+        /// </summary>
+        /// <param name="data"></param>
+        /// <returns>The decompiled file.</returns>
         public static INIFile LoadData(string data)
         {
             string[] lines = data.Split(new char[] { '\n', '\r' }, StringSplitOptions.RemoveEmptyEntries);
